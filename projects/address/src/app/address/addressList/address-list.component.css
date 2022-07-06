@@ -1,0 +1,37 @@
+.address-list-container {
+  margin: 10px;
+  height: auto;
+  width: 280px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.address-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 15px;
+  justify-content: space-around;
+  font-family: cursive;
+}
+
+.address-new {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: rgb(72, 50, 72) 1px 1px 1px 1px;
+}
+
+.address-new > span{
+  font-size: 88px;
+}
+
+.red-color{
+  box-shadow: red 1px 1px 1px 1px;;
+}
+
+.green-color{
+  box-shadow: green 1px 1px 1px 1px;;
+}
+
+
+

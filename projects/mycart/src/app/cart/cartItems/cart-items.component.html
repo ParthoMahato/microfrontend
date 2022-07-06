@@ -1,0 +1,14 @@
+<div *ngFor="let item of cartItems;let i = index" class="cart-items-container" [ngStyle]="{boxShadow:getColor(item)}">
+  <div>
+    <img [src]="item.image" alt="" class="img-responsive" style="max-height:80px">
+  </div>
+  <div class="cart-items">
+    <div class="cart-title">{{item.title}}</div>
+    <div class="cart-qty">{{item.qty}}</div>
+    <div class="cart-amount">{{item.amount | doubleDecimal | currency:'INR'}}</div>
+  </div>
+  <div class="cart-btn">
+    <input type="number" class="form-control" style="width:50%" value="{{item.orderedQty}}" min="1" max="5" (change)="onQuantityChange($event, i)">
+    <button class="btn btn-danger" type="button" (click)="onDelete(i)">Delete</button>
+  </div>
+</div>

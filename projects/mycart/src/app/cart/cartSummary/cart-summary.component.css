@@ -1,0 +1,23 @@
+.cart-line-items{
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery {
+  text-align: center;
+  font-size: 20px;
+}
+
+.no-padding-right-left{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.price-details{
+  text-align: center;
+  font-size: 20px;
+}
+
+.place-order{
+  font-size:15px
+}

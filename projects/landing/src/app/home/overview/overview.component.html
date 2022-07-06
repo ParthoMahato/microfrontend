@@ -1,0 +1,29 @@
+<!-- <div class="spinner_overlay" *ngIf="isLoading">
+  <div class="loader">
+    <div class="inner1"></div>
+    <div class="inner2"></div>
+    <div class="inner3"></div>
+    <div class="inner4"></div>
+  </div>
+</div> -->
+<div class="spinner_overlay" *ngIf="isLoading">
+  <div class="loader">
+    <div class="inner1"></div>
+    <div class="inner2"></div>
+    <div class="inner3"></div>
+    <div class="inner4"></div>
+  </div>
+  <div class="loader1">
+    <div class="p">L</div>
+    <div class="a" style="margin-top: 50px;">O</div>
+    <div class="r">A</div>
+    <div class="t" style="margin-top: 50px;">D</div>
+    <div class="h">I</div>
+    <div class="o" style="margin-top: 50px;">N</div>
+    <div class="m">G</div>
+  </div>
+</div>
+
+<div class="col-xs-12" *ngIf="!isLoading">
+  <app-items [itemList]="itemList" (addToCart)="addToCartHome($event)"></app-items>
+</div>

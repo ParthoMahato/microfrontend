@@ -1,0 +1,58 @@
+.address-container {
+    width: 50%;
+    margin: 15px auto;
+    /* background-color: #b6b6e9; */
+    padding: 30px 40px 25px 40px;
+    border-radius: 15px;
+    border: 2px solid #b6b6e9;
+    font-family: cursive;
+  }
+  
+  input.ng-invalid.ng-touched,
+  select.ng-invalid.ng-touched,
+  textarea.ng-invalid.ng-touched {
+    border: 2px solid red;
+  }
+  
+  .plus {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #b6b6e9;
+    padding-bottom: 5px;
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .btn-success{
+    color: #fff;
+    background-color: #b6b6e9;
+    border-color: #b6b6e9;
+  }
+
+  .address {
+    text-align:center;
+    font-size:25px
+  }
+
+  .no-padding-right {
+    padding-right:0px
+  }
+
+  .new-address{
+    padding-right:0px;
+    padding-left:0;
+    padding-top:27px;
+  }
+
+  .additional-address {
+    margin-bottom:20px;
+  }
+
+  .margin-top-50 {
+    margin-top: 50px;
+  }

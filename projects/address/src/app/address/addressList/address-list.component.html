@@ -1,0 +1,16 @@
+<div class="address-card">
+  <div class="address-list-container" *ngFor="let address of addressList; let i = index"
+    [ngClass]="{'green-color':(i % 2 === 0), 'red-color':(i % 2 !== 0)}">
+    <div><label for="Name">Name: </label>&nbsp;<span>{{ address.name}}</span></div>
+    <div><label for="Address">Address: </label>&nbsp;<span>{{ address.address.area}}</span></div>
+    <div *ngIf="address.address.addressLine && address.address.addressLine.length > 0">
+      <span *ngFor="let newLine of address.address.addressLine">{{ newLine.addressLine}}</span>
+    </div>
+    <div> <label for="Name">City: </label>&nbsp; <span>{{ address.address.city}}</span></div>
+    <div> <label for="Name">State: </label>&nbsp; <span>{{ address.address.state}}</span></div>
+    <div><label for="Name">Pincode: </label>&nbsp; <span>{{ address.address.pin}}</span></div>
+  </div>
+  <div class="address-list-container address-new" (click)="createNewAddress()">
+    <span>+</span>
+  </div>
+</div>

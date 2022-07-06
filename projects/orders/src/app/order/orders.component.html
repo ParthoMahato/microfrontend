@@ -1,0 +1,47 @@
+<div class="spinner_overlay" *ngIf="isLoading">
+  <div class="loader">
+    <div class="inner1"></div>
+    <div class="inner2"></div>
+    <div class="inner3"></div>
+    <div class="inner4"></div>
+  </div>
+  <div class="loader1">
+    <div class="p">L</div>
+    <div class="a" style="margin-top: 50px;">O</div>
+    <div class="r">A</div>
+    <div class="t" style="margin-top: 50px;">D</div>
+    <div class="h">I</div>
+    <div class="o" style="margin-top: 50px;">N</div>
+    <div class="m" >G</div>
+  </div>
+</div>
+  <ng-container *ngIf="!isLoading">
+    <div class="order-container" *ngIf="orderList.length > 0">
+      <div class="order-summary" *ngFor="let order of orderList">
+        <div class="order-header">
+          <div>
+            <div>Order Placed:</div>
+            <div>{{order.orderOn | date:'short':'IST'}}</div>
+          </div>
+          <div>
+            <div>Total Placed:</div>
+            <div>{{order.cartSummary.finalPrice | currency:'INR'}}</div>
+          </div>
+          <div>
+            <div>Shipped To:</div>
+            <div>{{order.address.name}}</div>
+          </div>
+          <div>
+            <div>Order Number:</div>
+            <div>{{order.ordereNumber}}</div>
+          </div>
+        </div>
+        <div class="order-body">
+          <span *ngFor="let item of order.cartItems">
+          <img [src]="item.image" alt="" height="80">
+        </span>
+        </div>
+      </div>
+  
+    </div>
+  </ng-container>

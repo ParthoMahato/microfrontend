@@ -1,0 +1,30 @@
+.order-container{
+  margin: 0px 15px;
+  font-family: cursive;
+}
+
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-direction: column;
+    border: 2px solid cornflowerblue;
+    border-radius: 8px;
+    margin-top: 20px;
+    /* box-shadow: 9px 12px 10px cornflowerblue; */
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    padding: 10px;
+  }
+  
+  .order-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  

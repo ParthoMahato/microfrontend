@@ -1,0 +1,270 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+
+body {
+  font-family: cursive !important;
+}
+ 
+.spinner_overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  z-index: 50;
+}
+
+.loader {
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  top: 20%;
+}
+
+.inner1 {
+  border: 4px solid #f3f3f3;
+  box-shadow: rgb(36 175 34) 0px 0px 10px 0px;
+  border-top: 4px solid rgb(36 175 34);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.inner2 {
+  border: 4px solid #f3f3f3;
+  box-shadow: rgb(255,99,71) 0px 0px 10px 0px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  border-top: 4px solid rgb(255,99,71);
+  justify-content: center;
+  align-items: center;
+  animation: spin2 2s linear infinite;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.inner3 {
+  border: 4px solid #f3f3f3;
+  box-shadow: rgb(103, 63,69) 0px 0px 10px 0px;
+  border-top: 4px solid rgb(103, 63,69);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 26px;
+  left: 26px;
+}
+
+.inner4 {
+  border: 4px solid #f3f3f3;
+  box-shadow: rgb(235,137,33) 0px 0px 10px 0px;
+  border-top: 4px solid rgb(235,137,33);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin2 2s linear infinite;
+  position: absolute;
+  top: 36px;
+  left: 36px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.loader1{
+  font-family: sans-serif;
+  display: flex;
+}
+
+.p, .a ,.r, .t, .h, .o, .m {
+  background-color: white;
+  border-radius: 5px;
+  margin-right:20px;
+  height: 80px;
+  text-align: center;
+  width: 80px;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  box-shadow: green 6px 4px 5px 0px;
+  }
+
+.p{
+  animation: p 2s linear infinite;
+}
+
+.a{
+  animation: a 2s linear infinite;
+}
+
+.r{
+  animation: r 2s linear infinite;
+}
+
+.t{
+  animation: t 2s linear infinite;
+}
+
+.h{
+  animation: h 2s linear infinite;
+}
+
+.o{
+  animation: o 2s linear infinite;
+}
+
+.m{
+  animation: m 2s linear infinite;
+}
+
+@keyframes p {
+  0% {
+    transform: rotate(0deg);
+   }
+   50% {
+    transform: translate(0px, 50px);
+    border: 1px solid rgb(36 175 34);
+    box-shadow: rgb(36 175 34) 6px 4px 5px 0px;
+   }
+  100% {
+    border: 1px solid rgb(36 175 34);
+    box-shadow: rgb(36 175 34) 6px 4px 5px 0px;
+   /* transform: rotate(-360deg); */
+  }
+}
+
+@keyframes a {
+  0% {
+    transform: rotate(0deg);
+   }
+  50% {
+    transform: translate(0px, -50px);
+    border: 1px solid rgb(255,99,71);
+    box-shadow: rgb(255,99,71) 6px 4px 5px 0px;
+  }
+  100% {
+    border: 1px solid rgb(255,99,71);
+    box-shadow: rgb(255,99,71) 6px 4px 5px 0px;
+    /* transform: rotate(-360deg); */
+  }
+}
+
+@keyframes r {
+  0% {
+    transform: rotate(0deg);
+   }
+  50% {
+    transform: translate(0px, 50px);
+    border: 1px solid rgb(103, 63,69);
+    box-shadow: rgb(103, 63,69) 6px 4px 5px 0px;
+  }
+  100% {
+    border: 1px solid rgb(103, 63,69);
+    box-shadow: rgb(103, 63,69) 6px 4px 5px 0px;
+    /* transform: rotate(-360deg); */
+  }
+}
+
+@keyframes t {
+  0% {
+    transform: rotate(0deg);
+   }
+  50% {
+    transform: translate(0px, -50px);
+    border: 1px solid rgb(235,137,33);
+    box-shadow: rgb(235,137,33) 6px 4px 5px 0px;
+  }
+  100% {
+    border: 1px solid rgb(235,137,33);
+    box-shadow: rgb(235,137,33) 6px 4px 5px 0px;
+    /* transform: rotate(-360deg); */
+  }
+}
+
+@keyframes h {
+  0% {
+    transform: rotate(0deg);
+   }
+  50% {
+    transform: translate(0px, 50px);
+    border: 1px solid rgb(72, 50, 72);
+    box-shadow: rgb(72, 50, 72) 6px 4px 5px 0px;
+  }
+  100% {
+    border: 1px solid rgb(72, 50, 72);
+    box-shadow: rgb(72, 50, 72) 6px 4px 5px 0px;
+    /* transform: rotate(-360deg); */
+  }
+}
+
+@keyframes o {
+  0% {
+    transform: rotate(0deg);
+   }
+  50% {
+    transform: translate(0px, -50px);
+    border: 1px solid rgb(199, 55, 47);
+    box-shadow: rgb(199, 55, 47) 6px 4px 5px 0px;
+  }
+  100% {
+    border: 1px solid rgb(199, 55, 47);
+    box-shadow: rgb(199, 55, 47) 6px 4px 5px 0px;
+    /* transform: rotate(-360deg); */
+  }
+}
+
+@keyframes m {
+  0% {
+    transform: rotate(0deg);
+   }
+  50% {
+    transform: translate(0px, 50px);
+    border: 1px solid rgb(154, 25, 0);
+    box-shadow: rgb(154, 25, 0) 6px 4px 5px 0px;
+  }
+  100% {
+    border: 1px solid rgb(154, 25, 0);
+    box-shadow: rgb(154, 25, 0) 6px 4px 5px 0px;
+    /* transform: rotate(-360deg); */
+  }
+}

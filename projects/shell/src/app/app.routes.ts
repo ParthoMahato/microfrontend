@@ -38,7 +38,7 @@ export const APP_ROUTES: Routes = [
     path: 'home/cart',
     loadChildren: async () => {
       const m = await loadRemoteModule({
-        remoteEntry: 'http://localhost:5002/remoteEntry.js',
+        remoteEntry: 'https://microfrontend-mycart.vercel.app/remoteEntry.js',
         remoteName: 'mycart',
         exposedModule: './CartModule'
       });
@@ -49,7 +49,7 @@ export const APP_ROUTES: Routes = [
     path: 'home/order',
     loadChildren: async () => {
       const m = await loadRemoteModule({
-        remoteEntry: 'http://localhost:5003/remoteEntry.js',
+        remoteEntry: 'https://microfrontend-orders.vercel.app/remoteEntry.js',
         remoteName: 'orders',
         exposedModule: './OrdersModule'
       });
@@ -60,7 +60,7 @@ export const APP_ROUTES: Routes = [
     path: 'home/address',
     loadChildren: async () => {
       const m = await loadRemoteModule({
-        remoteEntry: 'https://microfrontend123-address.vercel.app/remoteEntry.js',
+        remoteEntry: 'https://microfrontend-address.vercel.app/remoteEntry.js',
         remoteName: 'address',
         exposedModule: './AddressModule'
       });

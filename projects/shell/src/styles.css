@@ -16,7 +16,7 @@ body {
   height: 100%;
   background-color: rgb(255, 255, 255);
   opacity: 1;
-  z-index: 50;
+  z-index: 1000;
 }
 
 .loader {
@@ -185,7 +185,6 @@ body {
   100% {
     border: 1px solid rgb(255,99,71);
     box-shadow: rgb(255,99,71) 6px 4px 5px 0px;
-    /* transform: rotate(-360deg); */
   }
 }
 
@@ -201,7 +200,6 @@ body {
   100% {
     border: 1px solid rgb(103, 63,69);
     box-shadow: rgb(103, 63,69) 6px 4px 5px 0px;
-    /* transform: rotate(-360deg); */
   }
 }
 
@@ -217,7 +215,6 @@ body {
   100% {
     border: 1px solid rgb(235,137,33);
     box-shadow: rgb(235,137,33) 6px 4px 5px 0px;
-    /* transform: rotate(-360deg); */
   }
 }
 
@@ -233,7 +230,6 @@ body {
   100% {
     border: 1px solid rgb(72, 50, 72);
     box-shadow: rgb(72, 50, 72) 6px 4px 5px 0px;
-    /* transform: rotate(-360deg); */
   }
 }
 
@@ -243,13 +239,12 @@ body {
    }
   50% {
     transform: translate(0px, -50px);
-    border: 1px solid rgb(199, 55, 47);
-    box-shadow: rgb(199, 55, 47) 6px 4px 5px 0px;
+    border: 1px solid rgb(236, 45, 1);
+    box-shadow: rgb(236, 45, 1) 6px 4px 5px 0px;
   }
   100% {
-    border: 1px solid rgb(199, 55, 47);
-    box-shadow: rgb(199, 55, 47) 6px 4px 5px 0px;
-    /* transform: rotate(-360deg); */
+    border: 1px solid rgb(236, 45, 1);
+    box-shadow: rgb(236, 45, 1) 6px 4px 5px 0px;
   }
 }
 
@@ -267,4 +262,22 @@ body {
     box-shadow: rgb(154, 25, 0) 6px 4px 5px 0px;
     /* transform: rotate(-360deg); */
   }
+}
+
+@media only screen and (max-width: 760px) {
+  .loader{
+    display: none;
+  }
+
+  .loader1{
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+  }
+  .p, .a ,.r, .t, .h, .o, .m {
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+  }
+
 }

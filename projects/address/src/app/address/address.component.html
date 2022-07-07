@@ -18,14 +18,14 @@
 
 <address-list *ngIf="!isLoading && !addressCreationMode" [addressList]="addressList" (newAddress)="createNewAddress()">
 </address-list>
-<div class="address-container" *ngIf="!isLoading && addressCreationMode">
+<div class="address-container col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1" *ngIf="!isLoading && addressCreationMode">
   <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
     <div class="row">
-      <div class="form-group col-xs-6">
+      <div class="form-group col-md-6 col-xs-12">
         <label for="">Name</label>
         <input type="text" id="name" formControlName="name" class="form-control">
       </div>
-      <div class="form-group  col-xs-6">
+      <div class="form-group col-md-6 col-xs-12">
         <label for="">Mobile Phone</label>
         <input type="tele" class="form-control" id="phone" formControlName="phone">
       </div>
@@ -33,18 +33,18 @@
     <hr>
     <div formGroupName="address" class="row">
       <div class="address">Address</div>
-      <div class="form-group col-xs-12">
+      <div class="form-group col-md-12 col-xs-12">
         <label for="">Pin Code</label>
         <input type="text" class="form-control" id="pin" formControlName="pin">
       </div>
-      <div class="form-group col-xs-11 no-padding-right">
+      <div class="form-group col-md-11 col-xs-11">
         <label for="">Area</label>
         <select name="area" id="area" formControlName="area" class="form-control col-xs-10">
           <option value="">Select area</option>
           <option *ngFor="let area of areas">{{area}}</option>
         </select>
       </div>
-      <div class="form-group col-xs-1" class="new-address">
+      <div class="new-address col-md-1 col-xs-1">
         <div class="plus" (click)="addNewAddressLine()">+</div>
       </div>
       <div class="form-group col-xs-12" formArrayName="addressLine">

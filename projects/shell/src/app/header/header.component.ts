@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { select, Store } from '@ngrx/store';
-import { selectUser, State } from './reducer.details';
+import { Store } from '@ngrx/store';
 import * as ShellActions from '../store/shell.actions';
-import { Observable, Subscription } from 'rxjs';
-import {  globalState } from '../store/shell.selectors';
-import { filter, last, map, take, takeLast } from 'rxjs/operators';
-import { LoginState } from '../store/globalState';
+import { globalState } from '../store/shell.selectors';
+
 
 @Component({
   selector: 'cart-header',
@@ -16,16 +13,13 @@ import { LoginState } from '../store/globalState';
 export class HeaderComponent implements OnInit {
   loggedInUser: boolean = false;
   errorMessage: string = "";
-  counter$!: Observable<number>;
-  counterSubscription$!: Subscription;
-  test$!: Observable<LoginState>;
-  testSubscription$ !:Subscription; 
+  hamburgerActive: boolean = false;
   constructor(private router: Router, private store: Store<globalState>) { }
   ngOnInit() {
     this.store.select((state: globalState) => state).subscribe(
       (state: globalState) => {
         if (state['login-reducer']) {
-          
+
           if (Object.keys(state['login-reducer'].user).length > 0) {
             this.loggedInUser = true;
           } else {

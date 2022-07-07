@@ -1,9 +1,21 @@
 <div class="header-container">
+  <div class="hamburger hidden-lg hidden-sm hidden-md" *ngIf="loggedInUser" (click) = "hamburgerActive = !hamburgerActive"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu" [ngClass] = "{'hamburger-active':hamburgerActive,'hamburger-inactive':!hamburgerActive }">
+      <li><a type="button" routerLink="/home/order">My Orders</a></li>
+      <li><a type="button" routerLink="/home/address">Manage Address</a></li>
+      <li><a type="button" routerLink="/home/cart">Cart</a></li>
+      <li><a type="button" (click)="logout()">Logout</a></li>
+    </ul>
+  </div>
   <div class="header-text">
     <a type="button" routerLink="/home/landing">Fresh Cart</a>
   </div>
-  
-  <div class="header-navigation">
+
+  <div class="header-navigation hidden-xs" *ngIf="loggedInUser">
     <div class="dropdown">
       <a class="dropdown-toggle" type="button" data-toggle="dropdown">Partho
         <span class="caret"></span></a>

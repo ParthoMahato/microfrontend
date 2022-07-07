@@ -1,8 +1,6 @@
 .cart-item-container {
-    /* border: 2px solid green; */
-    /* box-shadow: rgb(36 175 34) 1px 1px 3px 1px; */
     border-radius: 15px;
-    padding: 0px;
+    /* padding: 0px; */
   }
   
   .cart-summary {
@@ -14,6 +12,13 @@
 
   .margin-top-20{
     margin-top:20px;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 760px) {
+    .cart-item-container {
+      padding: 0px;
+    }
   }
   
   
